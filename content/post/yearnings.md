@@ -1,7 +1,8 @@
 +++
 date = "2009-11-11T12:58:45+05:30"
 title = "Yearnings"
-
+categories = ["life"]
+tags = ["life"]
 +++
 Strawberries and Cream.
 

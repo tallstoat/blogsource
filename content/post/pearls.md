@@ -1,8 +1,8 @@
 +++
 date = "2009-01-06T19:26:19+05:30"
 title = "Pearls from the deep end =~ s/[a,s]//g"
-tags = ["perl", "beauty"]
 categories = ["code"]
+tags = ["perl", "beauty"]
 +++
 Reprinted from a veritable Perl/Tcl vs Scheme flame war of yore; of course without permission
 <!--more-->
