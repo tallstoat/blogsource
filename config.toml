@@ -29,4 +29,5 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
     social = true
     social_twitter = "talltoast"
     social_linkedin = "shakhan"
+    social_github = "tallstoat"
 
