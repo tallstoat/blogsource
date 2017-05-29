@@ -8,11 +8,11 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 
 [Author]
     name = "Shahid Khan"
-    bio = "Add bio here"
-    avatar = "img/avatar.png"
+    bio = "Perennial Code Tinkerer; Loves metal, historial fiction & lego"
+    avatar = "img/me.jpg"
 
 [Params]
-    subtitle = "Ramblings of a bit tinkerer" # Subtitle of your site
+    subtitle = "Ramblings of a bit tinkerer about tech and life" # Subtitle of your site
     description = " Shahid Khan's Personal blog about tech & life" # Description of your site
     opengraph = true
     readmore = false # Show "Read more" button in list if true
