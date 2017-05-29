@@ -956,6 +956,10 @@ textarea {
 	margin: 0 5px 0 0;
 }
 
+a.widget-social__link.widget__link.btn {
+        background-color: #fff
+}
+
 /*** Default WordPress Widgets ***/
 .widget-categories li {
 	border-bottom: 1px dotted #ebebeb;
