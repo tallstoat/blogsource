@@ -1,41 +1,32 @@
-languageCode = "en"
+baseurl = "/"
 title = "Uncombed Whiskers"
-theme = "Hucore"
-copyright = "&copy; 2017 | powered by <a href=\"http://gohugo.io\" target=\"_blank\">Hugo</a> ♥"
-disqusShortname = ""
-googleAnalytics = ""
+languageCode = "en-us"
+paginate = "10" # Number of posts per page
+theme = "mainroad"
+disqusShortname = "" # Enable comments by entering your Disqus shortname
+googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 
-[taxonomies]
-tag = "tags"
-category = "categories"
+[Author]
+    name = "Shahid Khan"
+    bio = "Add bio here"
+    avatar = "img/avatar.png"
 
-[params]
-description = "Ramblings of a bit tinkerer"
-keywords = ["code", "golang", "java", "life"]
-author = "Shahid Khan"
-sharingicons = true
-displayauthor = true
+[Params]
+    subtitle = "Ramblings of a bit tinkerer" # Subtitle of your site
+    description = " Shahid Khan's Personal blog about tech & life" # Description of your site
+    opengraph = true
+    readmore = false # Show "Read more" button in list if true
+    leftsidebar = false # Move sidebar to the left side if true
+    authorbox = true
+    post_navigation = true
 
-[params.highlight]
-style = "github"
-languages = ["go", "dockerfile"]
+[Params.widgets]
+    search = false 
+    recent_articles = true
+    categories = true 
+    tags = true
+    tags_counter = true # Enable counter for each tag in "Tags" widget (disabled by default)
+    social = true
+    social_twitter = "talltoast"
+    social_linkedin = "shakhan"
 
-[[params.social]]
-url = "https://github.com/tallstoat"
-fa_icon = "fa-github"
-
-[[params.social]]
-url = "https://twitter.com/talltoast"
-fa_icon = "fa-twitter"
-
-[[params.social]]
-url = "https://linkedin.com/in/shakhan"
-fa_icon = "fa-linkedin-square"
-
-[[params.social]]
-url = "/index.xml"
-fa_icon = "fa-rss"
-
-[[params.socialshare]]
-url = "https://linkedin.com/in/shakhan"
-fa_icon = "fa-linkedin-square"
