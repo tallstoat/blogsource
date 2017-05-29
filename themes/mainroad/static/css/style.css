@@ -754,7 +754,6 @@ select {
 .footer {
 	padding: 10px 25px;
 	border-top: 3px solid #999;
-	background: #2a2a2a;
 }
 
 .footer__copyright {
@@ -764,7 +763,7 @@ select {
 }
 
 .footer__copyright a {
-	color: #ffffff;
+	color: #a2a2a2;
 }
 
 /*** Images / Video ***/
