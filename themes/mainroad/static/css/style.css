@@ -557,6 +557,10 @@ select {
 	vertical-align: middle;
 }
 
+span.post__meta-categories.meta-categories {
+	float: right
+}
+
 .post__meta {
 	margin-top: 10px;
 	margin-top: 0.625rem;
