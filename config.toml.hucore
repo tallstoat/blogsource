@@ -1,0 +1,41 @@
+languageCode = "en"
+title = "Uncombed Whiskers"
+theme = "Hucore"
+copyright = "&copy; 2017 | powered by <a href=\"http://gohugo.io\" target=\"_blank\">Hugo</a> ♥"
+disqusShortname = ""
+googleAnalytics = ""
+
+[taxonomies]
+tag = "tags"
+category = "categories"
+
+[params]
+description = "Ramblings of a bit tinkerer"
+keywords = ["code", "golang", "java", "life"]
+author = "Shahid Khan"
+sharingicons = true
+displayauthor = true
+
+[params.highlight]
+style = "github"
+languages = ["go", "dockerfile"]
+
+[[params.social]]
+url = "https://github.com/tallstoat"
+fa_icon = "fa-github"
+
+[[params.social]]
+url = "https://twitter.com/talltoast"
+fa_icon = "fa-twitter"
+
+[[params.social]]
+url = "https://linkedin.com/in/shakhan"
+fa_icon = "fa-linkedin-square"
+
+[[params.social]]
+url = "/index.xml"
+fa_icon = "fa-rss"
+
+[[params.socialshare]]
+url = "https://linkedin.com/in/shakhan"
+fa_icon = "fa-linkedin-square"
