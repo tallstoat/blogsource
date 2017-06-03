@@ -17,7 +17,7 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
     opengraph = true
     readmore = false # Show "Read more" button in list if true
     leftsidebar = false # Move sidebar to the left side if true
-    authorbox = true
+    authorbox = false
     post_navigation = true
 
 [Params.widgets]
