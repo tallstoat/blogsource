@@ -2,7 +2,7 @@
 date = "2008-12-31T11:36:52+05:30"
 title = "Us"
 categories = ["life"]
-tags = ["life"]
+tags = ["reality"]
 +++
 In Thud, the dwarf Bashfullsson says “I need no axe to be a dwarf, Nor do I need to hate trolls. What kind of creature defines itself by hatred?”.
 <!--more-->

@@ -2,7 +2,7 @@
 date = "2010-11-25T23:15:23+05:30"
 title = "Picking a code editor"
 categories = ["code"]
-tags = ["code", "vi", "editor"]
+tags = ["vi", "editor"]
 +++
 If you are a programmer, it would'nt be an exaggeration to say that at least half of your life is spent within an editor. You are in your element within the editor. It's the programmer's domain where he/she creates something out of nothing, in a manner of speaking. Given this, it is really really important for a programmer to be the master of the editor he/she works with on a daily basis.
 <!--more-->
