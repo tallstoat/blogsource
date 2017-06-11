@@ -35,9 +35,6 @@ There are various articles explaining how to go from one mode to the other. For 
 
 OK. So, I'll now explain with examples, what I mean by code navigation & learning a language for it. Let's first start with navigation within a line.
 
-☚
-☛
-
 ```
 ☛The quick brown fox jumps over the lazy dog
 ```
