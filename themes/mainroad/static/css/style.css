@@ -139,7 +139,7 @@ body {
 
 .btn:hover {
 	color: #fff;
-	background: #e64946;
+	background: #0093C7;
 }
 
 /*** Columns ***/
@@ -292,7 +292,7 @@ blockquote {
 	font-style: italic;
 	color: #666;
 	padding: 5px 0 5px 15px;
-	border-left: 5px solid #e64946;
+	border-left: 5px solid #0093C7;
 }
 
 sup {
@@ -333,7 +333,7 @@ a {
 }
 
 a:hover {
-	color: #e64946;
+	color: #0093C7;
 }
 
 /*** Lists ***/
@@ -387,6 +387,7 @@ select {
 .logo {
 	padding: 20px;
 	overflow: hidden;
+	background-color: #00709E;
 }
 
 .logo__link {
@@ -398,6 +399,7 @@ select {
 	font-size: 32px;
 	font-size: 2rem;
 	line-height: 1;
+	color: #F2FCFF;
 }
 
 .logo__tagline {
@@ -405,7 +407,7 @@ select {
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 1;
-	color: #e64946;
+	color: #86E0FA;
 	padding-top: 10px;
 	margin-top: 10px;
 }
@@ -469,7 +471,7 @@ select {
 }
 
 .opened.menu__list {
-	border-top: 1px solid #e64946;
+	border-top: 1px solid #0093C7;
 }
 
 .menu__item {
@@ -479,11 +481,11 @@ select {
 }
 
 .menu__item:hover {
-	background: #e64946;
+	background: #0093C7;
 }
 
 .menu__item--active {
-	background: #e64946;
+	background: #0093C7;
 }
 
 .menu__item:first-child {
@@ -504,7 +506,7 @@ select {
 	}
 
 	.menu {
-		border-bottom: 5px solid #e64946;
+		border-bottom: 5px solid #0093C7;
 		#min-height: 42px;
 	}
 
@@ -536,7 +538,7 @@ select {
 }
 
 .meta a:hover {
-	color: #e64946;
+	color: #0093C7;
 }
 
 .meta span {
@@ -591,11 +593,11 @@ span.post__meta-categories.meta-categories {
 
 .post__content a {
 	font-weight: 700;
-	color: #e64946;
+	color: #0093C7;
 }
 
 .post__content a:hover {
-	color: #e64946;
+	color: #0093C7;
 	text-decoration: underline;
 }
 
@@ -618,7 +620,7 @@ span.post__meta-categories.meta-categories {
 }
 
 .tags__item:hover {
-	background: #e64946;
+	background: #0093C7;
 }
 
 .tags__link, .tags__link:hover {
@@ -631,7 +633,7 @@ span.post__meta-categories.meta-categories {
 	float: left;
 	padding: 8px;
 	margin-right: 6px;
-	background: #e64946;
+	background: #0093C7;
 }
 
 .icon-tag {
@@ -722,7 +724,7 @@ span.post__meta-categories.meta-categories {
 
 .pagination__item:hover, .pagination__item--current {
 	color: #fff;
-	background: #e64946;
+	background: #0093C7;
 }
 
 /*** Post Navigation ***/
@@ -851,7 +853,7 @@ input[type=text], input[type=email], input[type=tel], input[type=url] {
 
 input[type=text]:hover, input[type=email]:hover, input[type=tel]:hover,
 input[type=url]:hover, textarea:hover {
-	border: 1px solid #e64946;
+	border: 1px solid #0093C7;
 }
 
 input[type=submit] {
@@ -860,7 +862,7 @@ input[type=submit] {
 	font-weight: 700;
 	color: #fff;
 	padding: 10px 15px;
-	background: #e64946;
+	background: #0093C7;
 	cursor: pointer;
 	text-transform: uppercase;
 	-webkit-transition: all 0.1s linear;
@@ -946,7 +948,7 @@ textarea {
 	margin-bottom: 20px;
 	margin-bottom: 1.25rem;
 	text-transform: uppercase;
-	border-bottom: 3px solid #e64946;
+	border-bottom: 3px solid #0093C7;
 }
 
 .widget-social__item {
@@ -995,7 +997,7 @@ a.widget-social__link.widget__link.btn {
 
 .widget__link--taglist:hover, .widget .widget__link--taglist:hover {
 	color: #fff;
-	background: #e64946;
+	background: #0093C7;
 }
 
 /*** Recent Posts Widget ***/
