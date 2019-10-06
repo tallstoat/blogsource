@@ -949,6 +949,10 @@ textarea {
 	border-bottom: 3px solid #e64946;
 }
 
+.widget-social__item {
+	float: left;
+}
+
 .widget-social__link {
 	display: block;
 	margin: 0 0 8px 0;
