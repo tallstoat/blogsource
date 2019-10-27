@@ -6,7 +6,7 @@ tags = ["tcp", "algorithm"]
 +++
 It's been a while since I picked up the proverbial pen to jot down my ramblings. The usual trappings of work and life have encumbered me. But then again, the curious mind just needs to take a liking to something for the muse to strike. So here I am; digging into TCP congestion control mechanisms & the underlying algorithms. 
 
-Cause, heck; why not!
+'cause, heck; why not!
 
 Networks are fascinating things; Links and network elements working together to ferry bytes from point A to point B. As with everything else, each link and network element has varied resources and performance. Ah, the constraints of the real world! 
 
@@ -16,7 +16,11 @@ All packets contend at a router for the use of a link. Each such contending pack
 
 Most networks provide congestion-control mechanisms to deal with such situations. These mechanisms are typically available and implemented on both hosts and network elements like routers/switches. In this post, let's dig into how congestion-control mechanisms typically work on hosts.
 
-Each host (the one that's starting the transmission) or more specifically its tcp stack needs to gauge how much capacity is available in the network. That will help it in figuring out how many packets it can safely have in transit at any given time. The network however does not advertise this information (duh) so it's up to each host to determine it on it's own. How does it do that? Well, it starts off by sending packets. When it receives an ACK, it can assume that one of its packets has left the network; which means, that the network has the capacity to handle one more packet at this time i.e. without increasing congestion. The host uses these ACKs to pace the transmission of packets. Of course, there are many other hosts using the network and at any point of time they may or may not be using the network, which means that the available network capacity changes over time. This means that any host must be able to adjust the number of packets it has in transit factoring all these in dynamically. Well, good luck doing that effectively! But as it turns out, TCP provides various algorithms for just this purpose.
+Each host (the one that's starting the transmission) or more specifically its tcp stack needs to gauge how much capacity is available in the network. That will help it in figuring out how many packets it can safely have in transit at any given time. The network however does not advertise this information (duh) so it's up to each host to determine it on it's own. How does it do that? 
+
+Well, it starts off by sending packets. When it receives an ACK, it can assume that one of its packets has left the network; which means, that the network has the capacity to handle one more packet at this time i.e. without increasing congestion. The host uses these ACKs to pace the transmission of packets. Of course, there are many other hosts using the network and at any point of time they may or may not be using the network, which means that the available network capacity changes over time. 
+
+This means that any host must be able to adjust the number of packets it has in transit factoring all these in dynamically. Well, good luck doing that effectively! But as it turns out, TCP provides various algorithms just for this purpose.
 
 Most congestion control algorithms are loss-based i.e. they depend on packet loss as a signal to control the packet transmission rate. Some of them are **Tahoe, Reno and CUBIC**. All of these are typically based on some common underlying concepts like:
 
