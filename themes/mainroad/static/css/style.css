@@ -526,6 +526,12 @@ select {
 	font-size: 1.75rem;
 }
 
+.page-header__groovy_title {
+	font-size: 28px;
+	font-size: 1.75rem;
+	color: #009BB3;
+}
+
 .meta {
 	font-size: 13px;
 	font-size: 0.8125rem;
