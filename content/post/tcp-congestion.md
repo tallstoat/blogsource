@@ -1,5 +1,5 @@
 +++
-title = "TCP Congestion Control: I"
+title = "TCP Congestion Control I: Overview"
 date = 2019-10-26T13:38:18+05:30
 categories = ["code"]
 tags = ["tcp", "algorithm"]
@@ -12,9 +12,9 @@ Networks are fascinating things; Links and network elements working together to 
 
 Any real network is not infinitely scalable and has limited data carrying capacity. Given that, how does it effectively and fairly allocate resources among it's users? Remember, the resources are the bandwidth of the links, the buffers on the routers/switches etc. Age old problems! 
 
-All packets contend at a router for the use of a link. Each such contending packet is placed in a queue on the router, where it waits for its turn to be transmitted over the link. When you have too many such packets contending for the same link, the queue fills up. At first the packets start experiencing increased end-to-end delay, and eventually the queue overflows and packets are dropped by the router. Over time, if these long queues become the norm and drops more frequent, the network is said to be congested. 
+All packets contend at a router for the use of a link. Each such contending packet is placed in a queue on the router, where it waits for its turn to be transmitted over the link. When you have too many such packets contending for the same link, the queue fills up. At first the packets start experiencing increased end-to-end delay, and eventually the queue overflows and packets are dropped by the router. Over time, if these long queues become the norm and drops more frequent, the network is said to be congested. Essentially, packet loss and increased round trip times indicate congestion.
 
-Most networks provide congestion-control mechanisms to deal with such situations. These mechanisms are typically available and implemented on both hosts and network elements like routers/switches. In this post, let's dig into how congestion-control mechanisms typically work on hosts.
+Most networks provide congestion-control mechanisms to deal with such situations. These mechanisms are typically available and implemented on both hosts and network elements like routers/switches. In this post, let's dig into how these mechanisms typically work on hosts.
 
 Each host (the one that's starting the transmission) or more specifically its tcp stack needs to gauge how much capacity is available in the network. That will help it in figuring out how many packets it can safely have in transit at any given time. The network however does not advertise this information (duh) so it's up to each host to determine it on it's own. How does it do that? 
 
