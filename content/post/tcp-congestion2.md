@@ -30,7 +30,7 @@ AIMD is a generic feedback control algorithm. In the context of TCP congestion, 
 
 Different loss-control algorithms use variations of this generic algorithm leading to different link-utilization behavior. For instance, Tahoe on detecting congestion resets CW to 1 Packet. Reno on the other hand, resets CW to half of the previous CW. 
 
-### Slow Start
+### Slow Start & Congestion Avoidance
 
 The linear CW increase in AIMD works well, when sender is operating close to BDP. However, when starting from scratch it's fairly slow to utilize the available link capacity. That's why TCP provides a different mechanism called Slow Start (misnomer?). Slow Start actually increases CW exponentially rather than linearly. This is how it operates:
 
@@ -45,21 +45,25 @@ As you can see, this is exponential increase.
 When does Slow Start run? It actually runs in two different situations.
 
 - The first is at the start of a connection, when the sender has no idea about the network capacity and hence no known value of CW.
-- The second is when the connection goes dead while waiting for a timeout to occur. In this case, sender has a value of CW, lets call it CW<sub>target</sub> which is the CW (prior to congestion detection)/2. In this case, sender using Slow Start exponentially increases CW to get to CW<sub>target</sub> and then switches to additive increase till it detects congestion again. 
+- The second is when the connection goes dead while waiting for a timeout to occur. In this case, sender has a value of CW, lets call it CW<sub>target</sub> which is the CW (prior to congestion detection)/2. In this case, sender using Slow Start exponentially increases CW to get to CW<sub>target</sub> and then switches to additive increase till it detects congestion again.
 
-### Fast Retransmit
+This phase when the sender switches to additive increase is called **Congestion Avoidance**.
 
-Fast retransmit triggers resend of dropped packets sooner than regular timeouts. This is done to improve link utilization. This is how it works: 
+### Fast Retransmit & Fast Recovery
+
+Fast Retransmit triggers retransmission of dropped packets sooner than regular timeouts. This is how it works: 
 
 - Every time a packet arrives out of order at a receiver, it resends the same ACK it had sent last time. This is duplicate ACKing. 
 - When the sender sees a duplicate ACK, it knows that the receiver has received a packet out of order. 
 - But the earlier packet could be lost or is just delayed. So, the sender waits & does not retransmit yet. 
-- When it receives the duplicate ACK thrice, it retransmits the missing packet. 
+- When it receives the duplicate ACK thrice, it retransmits the missing packet without waiting for the timer to expire. 
 
-This simple retransmit mechanism has generally lead to a 20% improvement in link utilization.
+At this time once the missing packet is retransmitted, **Fast Recovery** kicks in. In this state, sender tries to maintain the current data flow by not going back to Slow Start. Instead it inflates the CW to accommodate all packets that have been buffered by the receiver.  
+
+This overall scheme of Fast Retransmit & Recovery works most efficiently in case of isolated packet losses. It is not efficient when there are multiple packet losses over a short time period. This mechanism has generally lead to a 20% improvement in link utilization.
 
 ### Finally
 
-Alright, we have covered the basic concepts underlying TCP congestion control mechanisms. Let's go forwards from here another time. Maybe pick up one of the algorithms? 
+Alright, we have covered the basic concepts underlying TCP congestion control mechanisms. Let's go forwards from here another time. Maybe pick up one of the algorithms next? 
 
 We'll see. Ciao! 
