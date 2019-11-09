@@ -37,7 +37,7 @@ In order to find which tcp congestion control algorithm is configured for your L
 sysctl net.ipv4.tcp_congestion_control
 ```
 
-One notable aspect of BBR is that clients are not required to implement BBR. so, just switch to BBR on server-side and you are good to go. You can do that on a 4.10+ linux kernel as shown below:
+One notable aspect of BBR is that clients are not required to implement BBR. So, just switch to BBR on server-side and you are good to go. You can do that on a 4.10+ linux kernel as shown below:
 ```
 sysctl -w net.ipv4.tcp_congestion_control=bbr
 ```
@@ -62,8 +62,8 @@ That's the million dollar question. Isn't it?
 
 BBR’s fairness to other connections has been a point of discussion for a while. Most empirical measurements have shown it to be unfair when competing with traditional loss-based CCAs. Experiments have led to the following 2 key observations:
 
-- In shallow-buffered networks, BBR’s bandwidth probing phase causes buffer overflows and bursty loss for competing flows. These bursts can lead to Cubic and Reno flows being starved for bandwidth. This will get fixed in [BBRv2](https://github.com/google/bbr/blob/v2alpha/net/ipv4/tcp_bbr2.c).
-- In residential capacity links (e.g. 10-100Mbps) with deep buffers, conflicting observations are reported on how BBR shares bandwidth with competing Cubic and Reno flows. For example, one of the experiments observed a single BBR flow consume almost 40% of link capacity when competing with as many as 16 Cubic flows. However early claims were made that BBR was generous to competing Cubic flows. This is quite confusing.
+- In shallow-buffered networks, BBR’s bandwidth probing phase causes buffer overflows and bursty loss for competing flows. These bursts can lead to CUBIC and Reno flows being starved for bandwidth. This will get fixed in [BBRv2](https://github.com/google/bbr/blob/v2alpha/net/ipv4/tcp_bbr2.c).
+- In residential capacity links (e.g. 10-100Mbps) with deep buffers, conflicting observations are reported on how BBR shares bandwidth with competing CUBIC and Reno flows. For example, one of the experiments observed a single BBR flow consume almost 40% of link capacity when competing with as many as 16 CUBIC flows. However early claims were made that BBR was generous to competing CUBIC flows. This is quite confusing.
 
 Very recently, a new paper has come up with a mathematical model to explain BBR's behavior in competition with loss-based CCAs. One of the key findings from this paper is that **while BBR is a rate-based algorithm when running alone, it degrades to window-based transmission when it competes with other flows** :boom:. Read the full paper [here](http://www.justinesherry.com/papers/ware-imc2019.pdf).
 
