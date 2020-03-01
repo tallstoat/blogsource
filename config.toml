@@ -1,7 +1,7 @@
 baseurl = "/"
 title = "Uncombed Whiskers"
 languageCode = "en-us"
-paginate = "10" # Number of posts per page
+paginate = "6" # Number of posts per page
 theme = "mainroad"
 disqusShortname = "" # Enable comments by entering your Disqus shortname
 googleAnalytics = "UA-100945032-1" # Enable Google Analytics by entering your tracking id
@@ -13,8 +13,8 @@ enableEmoji = "true"
     avatar = "img/avatar.png"
 
 [Params]
-    subtitle = "Ramblings of a bit tinkerer about tech and life" # Subtitle of your site
-    description = " Shahid Khan's Personal blog about tech & life" # Description of your site
+    subtitle = "Ramblings of a bit tinkerer" # Subtitle of your site
+    description = " Personal blog about tech & life" # Description of your site
     opengraph = true
     readmore = true # Show "Read more" button in list if true
     leftsidebar = false # Move sidebar to the left side if true
